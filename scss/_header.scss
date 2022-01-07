@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+.pageHeader {
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.7);
+    padding:0 20px;
+    box-sizing:border-box;
+    font-size:1.45rem;
+
+    h1 {
+        width:126px;
+        @extend %center;
+    }
+
+    .gnb {
+        @include flex;
+        height:127px;
+        ul {
+            @include flex;
+        }
+
+        li {
+            &:nth-child(2) {
+                margin:0 20px;
+            }
+        }
+    }
+}
+
+// .pageHeader

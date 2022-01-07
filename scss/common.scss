@@ -1,0 +1,93 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Noto+Serif+KR:wght@200;300;400;600&display=swap');
+
+/*
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Noto Serif KR', serif;
+*/
+
+%center {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
+@import 'reset','mixin','header';
+
+html {
+    font-size:10px;
+}
+
+body {
+    font-family:'Josefin Sans', 'Noto Serif KR', sans-serif;
+    color:#ffffff;
+}
+
+.visualSlide {
+
+    .page {
+        height:100vh;
+        background:no-repeat center center/cover;
+        padding:0 20px;
+
+        &.a {
+            background-image:url('../images/DB11.jpg');
+            margin-bottom:20px;
+            
+            .box1 {
+                width:133px;
+                height:45px;
+                padding-top:calc(100% / 10);
+
+                p {
+                    font-size:13.5px;
+
+                    &::after {
+                        content:'';
+                        display:block;
+                        height:2px;
+                        width:100%;
+                        background-color:#ffffff;
+                        margin-top:20px;
+                    }
+                }
+            }
+
+            h2 {
+                font-size:67px;
+                line-height:1;
+                font-weight:300;
+                margin-top:30px;
+            }
+        }
+
+        &.b {
+            li {
+                .photoTop {
+                    @include flex;
+                    align-items:stretch;
+                    
+                    img {
+                        width:100%;
+                        height:100%;
+                        
+                    }
+                    
+                    a {
+                        position: relative;
+                        outline:1px solid yellow;
+                        display:block;
+
+                        .first {
+                            position:absolute;
+                            top:50;
+                            outline: 1px solid red;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
